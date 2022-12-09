@@ -19,13 +19,19 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.click(findTestObject('Page_Patient Registration/button_Submit'))
+WebUI.navigateToUrl('https://www.google.com/')
 
-WebUI.click(findTestObject('Object Repository/Page_Patient Registration/div_Resend the OTP to my mobile phone in 57'))
+WebUI.takeFullPageScreenshotAsCheckpoint('Landing Page')
 
-WebUI.click(findTestObject('Object Repository/Page_Patient Registration/div_Resend the OTP to my mobile phone in 54'))
+WebUI.takeElementScreenshot(findTestObject('Object Repository/Page_Google/div_CcAdNbmarginauto.QCzoEcmargin-top3pxcol_f902b5'))
 
-WebUI.click(findTestObject('Page_Patient Registration/img_Error occured_logo-mh360'))
+WebUI.setText(findTestObject('Object Repository/Page_Google/input_Login_q'), 'youtube')
 
-WebUI.click(findTestObject('Object Repository/Page_Patient Registration/span_Enter your OTP'))
+WebUI.sendKeys(findTestObject('Object Repository/Page_Google/input_Login_q'), Keys.chord(Keys.ENTER))
+
+WebUI.click(findTestObject('Object Repository/Page_youtube - Penelusuran Google/h3_YouTube'))
+
+WebUI.takeFullPageScreenshotAsCheckpoint('Youtube Page')
+
+WebUI.closeBrowser()
 
